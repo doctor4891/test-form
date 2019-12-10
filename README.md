@@ -1,4 +1,4 @@
-Simple forms authorization, login and profile view 
+Simple forms registration, login and profile view 
 ==================================================
 
 # How to run #
