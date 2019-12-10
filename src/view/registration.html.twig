@@ -13,15 +13,12 @@
     <title>{{ title }}</title>
 </head>
 <body>
-
+{% include "blocks/navbar.html.twig" %}
 <div class="container">
-    <div class="h1 text-center lang" key="RegistrationForm">Registration form</div>
+    <div class="h3 text-center lang" key="RegistrationForm">Registration form</div>
     <hr>
-    <div class="h1 text-center lang" key="PreferLanguage">Choose Your prefer language</div>
-    {% include '/blocks/language.html.twig' %}
-    <hr>
-    <div class="h1 text-center">Fill user form</div>
-    {% include '/blocks/registrationForm.html.twig' %}
+    {% include 'blocks/registrationForm.html.twig' %}
+    {% include 'blocks/errors.html.twig' %}
 </div>
 <script src="/assets/js/language.js"></script>
 </body>

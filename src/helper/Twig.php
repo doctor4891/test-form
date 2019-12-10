@@ -4,14 +4,28 @@
 namespace helper;
 
 
+use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
-class Viewer
+/**
+ * Class Twig
+ * @package helper
+ */
+class Twig
 {
-    public static function renderIt(){
+    /**
+     * @param $template
+     * @param $variables
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
+     * Render template
+     */
+    public static function view($template, $variables)
+    {
         $loader = new FilesystemLoader(__DIR__ . '/../view');
-        $twig = new \Twig\Environment($loader,['cache' => false]);
+        $twig = new Environment($loader, ['cache' => false]);
 
-        echo $twig->render('index', ['name' => 'Fabien']);
+        echo $twig->render($template, $variables);
     }
 }

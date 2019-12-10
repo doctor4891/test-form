@@ -1,0 +1,45 @@
+version: "3.1"
+services:
+
+    mysql:
+      image: mysql:5.6
+      container_name: jobtest-mysql
+      working_dir: /application
+      volumes:
+        - ./src:/application
+        - ./mysql:/var/lib/mysql
+      environment:
+        - DB_HOST=jobtest-mysql
+        - MYSQL_ROOT_PASSWORD=password
+        - MYSQL_DATABASE=users
+        - MYSQL_USER=admin
+        - MYSQL_PASSWORD=password
+      ports:
+        - "3306:3306"
+
+    webserver:
+      image: nginx:alpine
+      container_name: jobtest-webserver
+      working_dir: /application
+      volumes:
+          - ./src:/application
+          - ./phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      ports:
+       - "8085:80"
+
+    php-fpm:
+      build: phpdocker/php-fpm
+      container_name: jobtest-php-fpm
+      working_dir: /application
+      volumes:
+        - ./src:/application
+        - ./phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini
+
+    composer.test:
+      image: composer/composer
+      volumes:
+        - ./src:/application
+      container_name: composer.test
+      working_dir: /application
+      command: install
+

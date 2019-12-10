@@ -1,0 +1,16 @@
+
+<form enctype="multipart/form-data" method="post" action="logged.php">
+    <div class="form-group">
+        <label for="UserLogin" class="lang" key="UserLogin">Enter your login</label>
+        <input name="login" type="text" class="form-control" id="UserLogin" aria-describedby="loginHelp" pattern="[a-z0-9]+" minlength="3" maxlength="20" required>
+        <small id="loginHelp" class="form-text text-muted lang" key="loginHelp" >Login must be from 3 to 20 characters length. You can use only english letters and digits.</small>
+    </div>
+    <div class="form-group">
+        <label for="UserPassword" class="lang" key="UserPassword">Password</label>
+        <input name="password" type="password" class="form-control" id="UserPassword" placeholder="Password" pattern="[a-z0-9]+" required minlength="6" maxlength="20">
+        <small id="passwordHelp" class="form-text text-muted lang" key="passwordHelp">Password must be from 6 to 20 english letters and digits.</small>
+    </div>
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <button type="submit" class="btn btn-primary lang" key="userSubmit">Submit</button>
+</form>
+
