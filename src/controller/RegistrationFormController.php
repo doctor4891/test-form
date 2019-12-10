@@ -18,7 +18,6 @@ class RegistrationFormController
     public function index()
     {
         Twig::view('registration.html.twig', [
-            'title' => 'User Form',
             'csrf' => CSRF::generate(),
             'errors' => Errors::$jar
         ]);
