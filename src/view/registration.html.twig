@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <title>{{ title }}</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="h1 text-center lang" key="RegistrationForm">Registration form</div>
+    <hr>
+    <div class="h1 text-center lang" key="PreferLanguage">Choose Your prefer language</div>
+    {% include '/blocks/language.html.twig' %}
+    <hr>
+    <div class="h1 text-center">Fill user form</div>
+    {% include '/blocks/registrationForm.html.twig' %}
+</div>
+<script src="/assets/js/language.js"></script>
+</body>
+</html>

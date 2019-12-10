@@ -1,0 +1,20 @@
+{
+  "name": "doctor4891/testForm",
+  "description": "exam for job",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nikolay Kushpela",
+      "email": "doctor4891@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "": ""
+    }
+  },
+  "require": {
+    "twig/twig": "^2.0"
+  }
+}
