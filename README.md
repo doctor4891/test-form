@@ -10,12 +10,4 @@ Dependencies:
 
 Once you're done, simply `cd` to your project and run `docker-compose up -d`. This will initialise and start all the containers, then leave them running in the background.
 
-## Services exposed outside your environment ##
-
-You can access your application via **`localhost`**, if you're running the containers directly, or through **``** when run on a vm. nginx and mailhog both respond to any hostname, in case you want to add your own hostname on your `/etc/hosts` 
-
-Service|Address outside containers
-------|---------|-----------
-Webserver|[localhost:8085](http://localhost:8085)
-MySQL|**host:** `localhost`; **port:** `8082`
-
+You can access your application via **`localhost:8085`**
