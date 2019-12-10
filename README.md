@@ -16,6 +16,6 @@ Change permissions for the folder **`src/assets/userpic`** to **`777`**
 
 You can access your application via **`localhost:8085`**
 
-Working example: **`http://188.225.39.240:8085`**
+Working example: http://188.225.39.240:8085
 
 Login: **`test`** Password: **`javiru`**
