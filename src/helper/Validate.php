@@ -187,6 +187,7 @@ class Validate
             return true;
         } else {
             Errors::$jar[] = 'BigPic';
+            return false;
         }
     }
 
