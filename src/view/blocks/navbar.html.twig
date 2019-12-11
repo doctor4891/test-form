@@ -1,23 +1,24 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light ">
-    <div class="container">
-
+<nav class="navbar navbar-expand-md navbar-light bg-light ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle" aria-controls="toggle" aria-control="toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="toggle">
         <a class="navbar-brand" href="#">Job Test</a>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <button class="btn btn-info translate mr-3" id="en-gb">English</button>
-
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-link">
+                <a class="nav-link translate" style="cursor:pointer;" id="en-gb">English</a>
             </li>
-            <li class="nav-item">
-                <button class="btn btn-info translate mr-3" id="ru-ru">Русский</button>
+            <li class="nav-link">
+                <a class="nav-link translate" style="cursor: pointer" id="ru-ru">Русский</a>
             </li>
-            <li class="nav-item">
-                <div class="mr-3 my-lg-0"><a href="/registration.php" class="btn btn-success"><span class="lang" key="registration">Registration </span></a></div>
+            <li class="nav-link">
+               <a href="/registration.php" class="nav-link"><span class="lang" key="registration">Registration </span></a>
             </li>
-            <li class="nav-item">
-                <div class="mr-3"><a href="/login.php" class="btn btn-success"><span class="lang" key="signIn">Sign in </span></a></div>
+            <li class="nav-link">
+               <a href="/login.php" class="nav-link"><span class="lang" key="signIn">Sign in </span></a>
             </li>
-            <li class="nav-item">
-                <div class="mr-3"><a href="/logout.php" class="btn btn-success"><span class="lang" key="signOut">Sign out </span></a></div>
+            <li class="nav-link">
+                <a href="/logout.php" class="nav-link"><span class="lang" key="signOut">Sign out </span></a>
             </li>
         </ul>
     </div>
