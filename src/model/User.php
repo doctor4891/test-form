@@ -26,7 +26,7 @@ class User
     {
         $user = 'root';
         $pswd = 'password';
-        $dsn = 'mysql:host=jobtest-mysql; dbname=users';
+        $dsn = 'mysql:host=172.30.0.1; dbname=users';
         $dbh = new PDO($dsn, $user, $pswd, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\'', PDO::MYSQL_ATTR_INIT_COMMAND => 'SET CHARACTER SET \'UTF8\';'));
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->pdo = $dbh;

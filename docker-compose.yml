@@ -37,6 +37,8 @@ services:
 
     composer.test:
       image: composer/composer
+      depends_on:
+        - php-fpm
       volumes:
         - ./src:/application
       container_name: composer.test

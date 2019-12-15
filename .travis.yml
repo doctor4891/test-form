@@ -1,0 +1,10 @@
+language: php
+os: linux
+services:
+    - docker
+env:
+    - DOCKER_COMPOSE_VERSION=1.24.1
+before_install:
+    - docker-compose up
+script:
+    - vendor/bin/phpunit --stderr tests
