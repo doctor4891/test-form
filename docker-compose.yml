@@ -35,13 +35,4 @@ services:
         - ./src:/application
         - ./phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini
 
-    composer.test:
-      image: composer/composer
-      depends_on:
-        - php-fpm
-      volumes:
-        - ./src:/application
-      container_name: composer.test
-      working_dir: /application
-      command: install
 
