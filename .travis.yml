@@ -1,6 +1,6 @@
 os: linux
 services:
     - docker
-install:
-    - docker-compose up -d
+script:
+    - docker-compose up
 
