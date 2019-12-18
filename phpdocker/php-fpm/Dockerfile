@@ -12,9 +12,6 @@ RUN apt-get update \
 RUN apt-get update \
     && apt-get -y install git \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
-# Update composer
-COPY ./src ./
-RUN composer update
-#tests
-RUN vendor/bin/phpunit tests --configuration phpunit.xml
+
+
 
