@@ -1,6 +1,6 @@
 Simple forms registration, login and profile view 
 ==================================================
-
+![](https://travis-ci.org/doctor4891/test-form.svg?branch=master)
 # How to run #
 
 Dependencies:
@@ -15,7 +15,5 @@ Clone this project: **`git clone https://github.com/doctor4891/test-form.git`**
 Change permissions for the folder **`src/assets/userpic`** to **`777`**
 
 You can access your application via **`localhost:8085`**
-
-Working example: http://188.225.39.240:8085
 
 Login: **`test`** Password: **`javiru`**
