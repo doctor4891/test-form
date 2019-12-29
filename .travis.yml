@@ -2,6 +2,12 @@ language: bash
 os: linux
 services:
     - docker
+before_install:
+    - docker-compose up -d
+before_script:
+    - docker exec -it jobtest-php-fpm /bin/bash
 script:
-    - docker-compose up
+    - vendor/bin/phpunit tests --configuration phpunit.xml
+
+
 
