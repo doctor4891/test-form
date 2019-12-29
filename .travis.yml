@@ -5,7 +5,7 @@ services:
 before_install:
     - docker-compose up -d
     - docker ps -a
-    - docker exec -it jobtest-php-fpm /bin/sh -c "cd /application; vendor/bin/phpunit tests --configuration phpunit.xml"
+    - docker exec -it jobtest-php-fpm /bin/sh -c "cd /application; composer update; vendor/bin/phpunit tests --configuration phpunit.xml"
 script:
     - vendor/bin/phpunit tests --configuration phpunit.xml
 
